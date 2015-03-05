@@ -1,5 +1,9 @@
+  $('button').click(function(){
+  
+  var zip = $('#zip').val();
+  
   $.simpleWeather ({
-  	location: 99004,
+  	location: zip,
   	unit: 'f',
 
 // Get _weather_ object
@@ -20,6 +24,7 @@ success: function(weather){
       $('.state').text(state);
       $('.currently').text(currentTemp);
       
+
       
 },
 
@@ -28,18 +33,8 @@ error: function(message){
 }
       });
 
-
-// show zip
-var showZip = function () {
-	var zip =  document.getElementById('val').value;
-    $('.zip').text(zip);
-    
-};
-
-// Click button, showName
-$('button').click(function(){
-  
-  //Call showName
-  showZip();
-  
 });
+
+
+  
+
