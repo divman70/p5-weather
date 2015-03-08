@@ -7,27 +7,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>DESN 378 Website Starter</title>
+  <title>Weather App</title>
 
   <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
-<body>
-  <h1 class="temp">Temprature</h1>
-  <h1 class="currently">Current Temprature</h1>
-  <h1 class="city">City</h1>
-  <h1 class="state">State</h1>
-  <input id="zip" type="text" value="Enter Zip Code">
-  <button>Weather Report</button>
+  <body>
+    <div id="d" class="ui page grid"> <!-- container -->
+      <div id="main" class="six wide centered column">
+         <h1 class="temp">Temprature</h1>
+         <h3 class="currently">Current Temprature</h3>
+         <h3 class="city">City</h3>
+         <h3 class="state">State</h3>
+          <div class="ui fluid action input"> <!-- input + button container -->
+           <input id="zip" type="text" value="Enter Zip Code">
+           <div class="ui blue button">Weather Report</div>
+          </div> <!-- End of input + button container -->
+      </div> <!-- end of center -->
+    </div> <!-- End of Container -->
+   
 
-  
-  
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-  <script src="js/semantic.min.js"></script>
-  <script src="js/weather.js"></script>
-  <script src="js/scripts.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/scripts.js"></script>
 
-</body>
+  </body>
 </html>

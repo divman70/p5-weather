@@ -1,4 +1,4 @@
-  $('button').click(function(){
+  $('.button').click(function(){
   
   var zip = $('#zip').val();
   
@@ -23,9 +23,7 @@ success: function(weather){
       $('.city').text(city);
       $('.state').text(state);
       $('.currently').text(currentTemp);
-      
-
-      
+          
 },
 
 error: function(message){

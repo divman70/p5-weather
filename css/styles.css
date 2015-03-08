@@ -1,0 +1,15 @@
+#main {
+	background: red;
+	text-align: center;
+	padding: 25px 0;
+	margin-top: 150px;
+}
+
+#d {
+	background: blue;
+}
+
+body {
+	background: green;
+}
+
