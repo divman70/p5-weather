@@ -1,3 +1,4 @@
+
   $('.button').click(function(){
   
   var zip = $('#zip').val();
@@ -16,13 +17,27 @@ success: function(weather){
       var state = weather.region;
       // get and store current weather
       var currentTemp = weather.currently;
+      // get and store current weather code
+      var type = weather.code;
+      // output weather code
+      console.log(type);
+      // get and store weather for next day
+      var upcomingWeather = weather.forecast[1].day + ' ' + weather.forecast[1].high;
       
       // Output to hooks in HTML
       $('.temp').text(temp);
       $('.city').text(city);
       $('.state').text(state);
       $('.currently').text(currentTemp);
+      $('p').text(upcomingWeather); 
 
+      // checks for dangerous weather conditions 
+      if (type != 33 && type != 34) {
+        $('#main').css('background-color', 'lightblue');
+      }
+        else {
+          $('#main').css('background-color', 'red');
+        }
 
 },
 
@@ -71,12 +86,14 @@ if (navigator.geolocation) {
       var state = weather.region;
 
       var currentTemp = weather.currently;
-      
+
+            
       // Output to hooks in HTML
       $('.temp').text(temp);
       $('.city').text(city);
       $('.state').text(state);
       $('.currently').text(currentTemp);
+      
       
       // See console for _weather_ object
       console.log(weather);
