@@ -1,5 +1,6 @@
+$('.warnning').hide();
 
-  $('.button').click(function(){
+$('.button').click(function(){
   
   var zip = $('#zip').val();
 
@@ -32,13 +33,30 @@ success: function(weather){
       $('p').text(upcomingWeather); 
 
       // checks for dangerous weather conditions 
-      if (type != 33 && type != 34) {
-        $('#main').css('background-color', 'lightblue');
-      }
-        else {
-          $('#main').css('background-color', 'red');
+      if (type == 0 || type == 1 || type == 2 || type == 3 || type == 4) {
+        $('body').css('background-image', 'url("img/storm.jpg")');
+        $('.warnning').show();
         }
-
+         // checks for rainy weather conditions 
+        else if (type == 8 || type == 9 || type == 10 || type == 11 || type == 12) {
+          $('body').css('background-image', 'url("img/rain.jpg")');
+        }
+        // checks for snowy weather conditions
+        else if (type == 13 || type == 14 || type == 15 || type == 16 || type == 33 ||  type == 41 || type == 43 || type == 46) {
+          $('body').css('background-image', 'url("img/ice.jpg")');
+        }
+        // checks for sunny weather conditions
+        else if (type == 31 || type == 32 || type == 34 || type == 35 || type == 36 || type == 46) {
+          $('body').css('background-image', 'url("img/sun.jpg")');
+        }
+        // checks for foggy weather conditions
+        else if (type == 20) {
+          $('body').css('background-image', 'url("img/fog.jpg")');
+        }
+        // goes to default image
+        else {
+          $('body').css('background-image', 'url("img/road.jpg")');
+        }
 },
 
 error: function(message){

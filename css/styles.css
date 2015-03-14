@@ -1,17 +1,25 @@
 #main {
-	background: lightblue;
+	/*background: lightblue;*/
+	/*opacity: 0.6;*/
 	text-align: center;
 	padding: 25px 0;
 	margin-top: 150px;
 }
 
 #d {
-	background: blue;
+	/*background: blue;*/
+}
+
+.warnning {
+	background: yellow;
 }
 
 body {
 	/*get background picture of car to use as main background or mountains n stuff*/
-	background: green;
+	background-image: url('../img/road.jpg');
+	background-size: 100%;
+  	background-repeat: no-repeat;
+  	background-position: center;
 }
 
 
