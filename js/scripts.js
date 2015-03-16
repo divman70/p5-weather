@@ -11,7 +11,7 @@ $('.button').click(function(){
 // Get _weather_ object
 success: function(weather){
 // Get & store temperature
-      var temp = weather.temp;
+      var temp = weather.temp + '°';
       // Get & store city
       var city = weather.city;
       // get and store state
@@ -20,8 +20,11 @@ success: function(weather){
       var currentTemp = weather.currently;
       // get and store current weather code
       var type = weather.code;
+
+      // var type =  'img\\' + weather.code + '.png';
       // output weather code
       console.log(type);
+
       // get and store weather for next day
       // var upcomingWeather = weather.forecast[1].day + ' ' + weather.forecast[1].high;
       
@@ -30,6 +33,8 @@ success: function(weather){
       $('.city').text(city);
       $('.state').text(state);
       $('.currently').text(currentTemp);
+      // $('.img').src.replace(type);
+
       // $('p').text(upcomingWeather); 
 
       // checks for dangerous weather conditions 
@@ -38,20 +43,24 @@ success: function(weather){
         $('.warnning').show();
         }
          // checks for rainy weather conditions 
-        else if (type == 8 || type == 9 || type == 10 || type == 11 || type == 12) {
+        else if (type == 8 || type == 9 || type == 10 || type == 11 || type == 29 || type == 30) {
           $('body').css('background-image', 'url("img/rain.jpg")');
         }
         // checks for snowy weather conditions
-        else if (type == 13 || type == 14 || type == 15 || type == 16 || type == 33 ||  type == 41 || type == 43 || type == 46 || temp <= 36) {
+        else if (type == 13 || type == 14 || type == 15 || type == 16 || type == 41 || type == 43 || type == 46 || temp <= 36) {
           $('body').css('background-image', 'url("img/ice.jpg")');
         }
         // checks for sunny weather conditions
-        else if (type == 31 || type == 32 || type == 34 || type == 35 || type == 36 || type == 46) {
+        else if (type == 31 || type == 32 || type == 34 || type == 35 || type == 36) {
           $('body').css('background-image', 'url("img/sun.jpg")');
         }
         // checks for foggy weather conditions
         else if (type == 20) {
           $('body').css('background-image', 'url("img/fog.jpg")');
+        }
+        // checks for night & stormy weather conditions
+         else if (type == 26 || type == 27 || type == 29 || type == 33 || type == 38 || type == 39 || type == 40 || type == 45 || type == 47) {
+          $('body').css('background-image', 'url("img/night.jpg")');
         }
         // goes to default image
         else {

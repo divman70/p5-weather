@@ -1,14 +1,13 @@
 #main {
-	background: white;
-	opacity: 0.9;
+
+	background: rgba(255,255,255,.7);
 	text-align: center;
 	padding: 25px 0;
 	margin-top: 150px;
+	border-radius: 5px;
+
 }
 
-#d {
-	/*background: blue;*/
-}
 
 .footer {
 	background: black;
@@ -19,6 +18,14 @@
 	border-radius: 15px;
 }
 
+.button {
+	padding: 25px;
+}
+
+h1,
+h3 {
+	font-family: 'Roboto', sans-serif;
+}
 
 body {
 	/*get background picture of car to use as main background or mountains n stuff*/
@@ -26,6 +33,7 @@ body {
 	background-size: 100%;
   	background-repeat: no-repeat;
   	background-position: center;
+  	background-attachment: fixed;
 }
 
 
